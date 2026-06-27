@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>EthioInfluence - Explore</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-secondary-fixed": "#2a1700", "on-primary-fixed": "#002203",
+        "tertiary-container": "#525151", "on-primary-container": "#90d689",
+        "secondary-fixed-dim": "#ffb95c", "on-surface": "#191c1d",
+        "on-primary": "#ffffff", "on-tertiary-fixed": "#1b1c1c",
+        "surface-bright": "#f8f9fa", "inverse-surface": "#2e3132",
+        "error-container": "#ffdad6", "error": "#ba1a1a",
+        "primary-fixed": "#acf4a4", "on-secondary-fixed-variant": "#653e00",
+        "surface-dim": "#d9dadb", "primary-fixed-dim": "#91d78a",
+        "surface-tint": "#2a6b2c", "tertiary": "#3b3a3a",
+        "surface-container-highest": "#e1e3e4", "primary-container": "#1b5e20",
+        "background": "#f8f9fa", "tertiary-fixed-dim": "#c8c6c5",
+        "secondary-fixed": "#ffddb7", "inverse-primary": "#91d78a",
+        "on-tertiary-fixed-variant": "#474746", "tertiary-fixed": "#e5e2e1",
+        "secondary-container": "#ffa504", "on-tertiary-container": "#c6c4c3",
+        "surface": "#f8f9fa", "on-background": "#191c1d",
+        "surface-container-high": "#e7e8e9", "on-secondary-container": "#684100",
+        "primary": "#00450d", "on-tertiary": "#ffffff",
+        "secondary": "#855400", "outline": "#717a6d",
+        "on-error-container": "#93000a", "on-surface-variant": "#41493e",
+        "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff",
+        "surface-variant": "#e1e3e4", "outline-variant": "#c0c9bb",
+        "inverse-on-surface": "#f0f1f2", "surface-container": "#edeeef",
+        "on-error": "#ffffff", "surface-container-low": "#f3f4f5",
+        "on-primary-fixed-variant": "#0c5216"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: {
+        base: "4px", lg: "40px", gutter: "24px", "margin-desktop": "48px",
+        xl: "64px", sm: "16px", "margin-mobile": "16px", xs: "8px", md: "24px"
+      },
+      fontFamily: {
+        "label-md": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"],
+        "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "body-lg": ["Inter"],
+        "label-sm": ["Inter"], "display-lg": ["Inter"]
+      },
+      fontSize: {
+        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }]
+      }
+    }
+  }
+}
+</script>
+<style>
+body { -webkit-tap-highlight-color: transparent; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.chip-active { background-color: #1B5E20 !important; color: #ffffff !important; border-color: #1B5E20 !important; }
+body { min-height: max(884px, 100dvh); }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-24 pt-16 font-body-md">
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm flex items-center justify-between px-margin-mobile h-16">
+<a href="index.html" class="text-primary hover:bg-surface-container-low p-2 rounded-full"><span class="material-symbols-outlined">arrow_back</span></a>
+<div class="font-headline-sm text-headline-sm font-bold text-primary truncate px-2 text-center flex-1">Explore</div>
+<button class="text-primary hover:bg-surface-container-low p-2 rounded-full"><span class="material-symbols-outlined">search</span></button>
+</header>
+<main class="max-w-md mx-auto px-margin-mobile w-full">
+<section class="mt-md mb-sm">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><span class="material-symbols-outlined text-outline-variant">search</span></div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border border-outline-variant rounded-lg text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm placeholder:text-outline" placeholder="Search creators, niches..." type="text"/>
+</div>
+</section>
+<section class="mb-md">
+<div class="flex items-center gap-2 mb-xs"><span class="material-symbols-outlined text-on-surface-variant" style="font-size:18px">filter_list</span><h2 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Filters</h2></div>
+<div class="overflow-x-auto hide-scrollbar pb-2 -mx-margin-mobile px-margin-mobile">
+<div class="flex gap-2 min-w-max">
+<button class="px-4 py-1.5 rounded-full bg-[#EEEEEE] text-[#757575] border border-transparent font-label-md text-label-md whitespace-nowrap chip-active">All</button>
+<button class="px-4 py-1.5 rounded-full bg-[#EEEEEE] text-[#757575] font-label-md text-label-md whitespace-nowrap">Fashion</button>
+<button class="px-4 py-1.5 rounded-full bg-[#EEEEEE] text-[#757575] font-label-md text-label-md whitespace-nowrap">Tech</button>
+<button class="px-4 py-1.5 rounded-full bg-[#EEEEEE] text-[#757575] font-label-md text-label-md whitespace-nowrap">Travel</button>
+<div class="w-px h-6 bg-outline-variant mx-1 self-center"></div>
+<button class="px-4 py-1.5 rounded-full bg-[#EEEEEE] text-[#757575] font-label-md text-label-md whitespace-nowrap flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:16px">photo_camera</span> Instagram</button>
+<button class="px-4 py-1.5 rounded-full bg-[#EEEEEE] text-[#757575] font-label-md text-label-md whitespace-nowrap flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:16px">play_arrow</span> TikTok</button>
+</div>
+</div>
+</section>
+<section class="space-y-4">
+<article class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.12)] border border-[#E0E0E0] overflow-hidden">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover rounded-t-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD2kZsGjiygV4noJ1Ih5saqTPGFDjjgeqHdkktnj6eP1_5fSp1B14TUtdIucbHANOtHCg4cIjZrIRcAYrS_DZtAkkusljh9sYwsMEzWWwFiaJo9_k7t9XgxIFYNR4HFMt-GXqWmNU5QunE3GHSYZc6_3TLO-6rXl8aWefTflVnzX9LhkuU52ZP_L4Ekbsie9tKUn20YTF0Ob0ANkG7LmMW2c7V-iivUlCMq_8BOcxgrU1lV0dRj_S1k6Ec94-E2lWWKM0QyNpOG59q"/>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1 shadow-sm"><span class="material-symbols-outlined text-secondary-container" style="font-size:14px;font-variation-settings:'FILL'1">star</span><span class="font-label-sm text-label-sm text-on-surface">4.9</span></div>
+</div>
+<div class="p-sm flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div><h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">Kalkidan T.</h3><p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-0.5"><span class="material-symbols-outlined text-outline" style="font-size:16px">location_on</span> Addis Ababa</p></div>
+<div class="bg-primary-container/10 px-2.5 py-1 rounded-lg border border-primary-container/20 flex flex-col items-center"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide text-[10px]">Eng. Rate</span><span class="font-headline-sm text-headline-sm text-primary-container" style="font-size:18px;line-height:24px">5.2%</span></div>
+</div>
+<div class="flex flex-wrap gap-2"><span class="px-2 py-1 rounded bg-[#EEEEEE] text-[#757575] font-label-sm text-label-sm">Fashion</span><span class="px-2 py-1 rounded bg-[#EEEEEE] text-[#757575] font-label-sm text-label-sm">Lifestyle</span><span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:12px">group</span> 120k</span></div>
+<div class="pt-2 flex gap-2">
+<a href="profile.html" class="flex-1 bg-surface border border-outline text-on-surface py-2 rounded-lg font-label-md text-label-md hover:bg-surface-container-low flex justify-center items-center gap-2">View Profile</a>
+<button class="flex-[1.5] bg-primary-container text-on-primary py-2 rounded-lg font-label-md text-label-md shadow-sm hover:bg-primary flex justify-center items-center gap-2"><span class="material-symbols-outlined" style="font-size:18px">mail</span> Message</button>
+</div>
+</div>
+</article>
+<article class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.12)] border border-[#E0E0E0] overflow-hidden">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover rounded-t-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8yHpgArbdT2AkuDK6VHTU-Pz0RfO2KADrJx-tbT--2Kd--dlxh3R9fH5U-VVcolm45_4VXBlSGuG4g73qGsGZXW3rj_2LBTgXyGheKQHBoA7c0lFjUEIpj6uKVzY5v9wCaHUzKil9N4niTPijbjn1HgmLW_nMmNSboZHcBcSQ9-EmcQ5rzOwKzeG16iv7J1rcB4NAsAxhFMHmkShrmJGxUmXX1XOrWBa6He40ttzfrTCxnV3iZhkw74KB8rmbr4efznyYtXkSI09I"/>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1 shadow-sm"><span class="material-symbols-outlined text-secondary-container" style="font-size:14px;font-variation-settings:'FILL'1">star</span><span class="font-label-sm text-label-sm text-on-surface">4.7</span></div>
+</div>
+<div class="p-sm flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div><h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">Yonatan Tech</h3><p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-0.5"><span class="material-symbols-outlined text-outline" style="font-size:16px">location_on</span> Hawassa</p></div>
+<div class="bg-primary-container/10 px-2.5 py-1 rounded-lg border border-primary-container/20 flex flex-col items-center"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide text-[10px]">Eng. Rate</span><span class="font-headline-sm text-headline-sm text-primary-container" style="font-size:18px;line-height:24px">8.4%</span></div>
+</div>
+<div class="flex flex-wrap gap-2"><span class="px-2 py-1 rounded bg-[#EEEEEE] text-[#757575] font-label-sm text-label-sm">Tech</span><span class="px-2 py-1 rounded bg-[#EEEEEE] text-[#757575] font-label-sm text-label-sm">Reviews</span><span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:12px">group</span> 45k</span></div>
+<div class="pt-2 flex gap-2">
+<a href="profile.html" class="flex-1 bg-surface border border-outline text-on-surface py-2 rounded-lg font-label-md text-label-md hover:bg-surface-container-low flex justify-center items-center gap-2">View Profile</a>
+<button class="flex-[1.5] bg-primary-container text-on-primary py-2 rounded-lg font-label-md text-label-md shadow-sm hover:bg-primary flex justify-center items-center gap-2"><span class="material-symbols-outlined" style="font-size:18px">mail</span> Message</button>
+</div>
+</div>
+</article>
+</section>
+<div class="mt-md text-center"><button class="text-primary-container font-label-md text-label-md hover:underline decoration-2 underline-offset-4">Load More Creators</button></div>
+</main>
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface shadow-[0_-4px_12px_rgba(0,0,0,0.12)] flex justify-around items-center h-20 pb-safe px-2">
+<a href="index.html" class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1"><span class="material-symbols-outlined" style="font-variation-settings:'FILL'1">explore</span><span class="font-label-sm text-label-sm mt-1">Explore</span></a>
+<a href="dashboard.html" class="flex flex-col items-center justify-center text-on-surface-variant rounded-lg p-2"><span class="material-symbols-outlined">calendar_today</span><span class="font-label-sm text-label-sm mt-1">Bookings</span></a>
+<a href="#" class="flex flex-col items-center justify-center text-on-surface-variant rounded-lg p-2 relative"><span class="material-symbols-outlined">chat_bubble</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full border-2 border-surface"></span><span class="font-label-sm text-label-sm mt-1">Messages</span></a>
+<a href="profile.html" class="flex flex-col items-center justify-center text-on-surface-variant rounded-lg p-2"><span class="material-symbols-outlined">person</span><span class="font-label-sm text-label-sm mt-1">Profile</span></a>
+</nav>
+<script>
+const chips = document.querySelectorAll('.overflow-x-auto button');
+chips.forEach(chip => {
+  chip.addEventListener('click', function() {
+    const parent = this.parentElement;
+    const idx = Array.from(parent.children).indexOf(this);
+    if (idx < 4) {
+      for(let i=0; i<4; i++) parent.children[i].classList.remove('chip-active');
+      this.classList.add('chip-active');
+    } else {
+      this.classList.toggle('chip-active');
+    }
+  });
+});
+</script>
+</body>
+</html>

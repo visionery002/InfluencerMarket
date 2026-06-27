@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechEthio Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-secondary-fixed": "#2a1700", "on-primary-fixed": "#002203",
+        "tertiary-container": "#525151", "on-primary-container": "#90d689",
+        "secondary-fixed-dim": "#ffb95c", "on-surface": "#191c1d",
+        "on-primary": "#ffffff", "on-tertiary-fixed": "#1b1c1c",
+        "surface-bright": "#f8f9fa", "inverse-surface": "#2e3132",
+        "error-container": "#ffdad6", "error": "#ba1a1a",
+        "primary-fixed": "#acf4a4", "on-secondary-fixed-variant": "#653e00",
+        "surface-dim": "#d9dadb", "primary-fixed-dim": "#91d78a",
+        "surface-tint": "#2a6b2c", "tertiary": "#3b3a3a",
+        "surface-container-highest": "#e1e3e4", "primary-container": "#1b5e20",
+        "background": "#f8f9fa", "tertiary-fixed-dim": "#c8c6c5",
+        "secondary-fixed": "#ffddb7", "inverse-primary": "#91d78a",
+        "on-tertiary-fixed-variant": "#474746", "tertiary-fixed": "#e5e2e1",
+        "secondary-container": "#ffa504", "on-tertiary-container": "#c6c4c3",
+        "surface": "#f8f9fa", "on-background": "#191c1d",
+        "surface-container-high": "#e7e8e9", "on-secondary-container": "#684100",
+        "primary": "#00450d", "on-tertiary": "#ffffff",
+        "secondary": "#855400", "outline": "#717a6d",
+        "on-error-container": "#93000a", "on-surface-variant": "#41493e",
+        "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff",
+        "surface-variant": "#e1e3e4", "outline-variant": "#c0c9bb",
+        "inverse-on-surface": "#f0f1f2", "surface-container": "#edeeef",
+        "on-error": "#ffffff", "surface-container-low": "#f3f4f5",
+        "on-primary-fixed-variant": "#0c5216"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: {
+        base: "4px", lg: "40px", gutter: "24px", "margin-desktop": "48px",
+        xl: "64px", sm: "16px", "margin-mobile": "16px", xs: "8px", md: "24px"
+      },
+      fontFamily: {
+        "label-md": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"],
+        "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "body-lg": ["Inter"],
+        "label-sm": ["Inter"], "display-lg": ["Inter"]
+      },
+      fontSize: {
+        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }]
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+body { min-height: max(884px, 100dvh); }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden min-h-screen pb-[100px]">
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm flex items-center justify-between px-margin-mobile h-16 md:hidden">
+<button class="text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full"><span class="material-symbols-outlined">menu</span></button>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">EthioInfluence</span>
+<button class="text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full"><span class="material-symbols-outlined">search</span></button>
+</header>
+<main class="pt-20 px-margin-mobile max-w-7xl mx-auto space-y-md">
+<section class="pt-sm"><h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface">Hello, TechEthio</h1><p class="font-body-md text-body-md text-on-surface-variant mt-xs">Here's a summary of your brand activity.</p></section>
+<section class="grid grid-cols-2 gap-sm">
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-outline-variant flex flex-col justify-between h-32">
+<div class="flex items-center justify-between"><span class="material-symbols-outlined text-primary-container bg-primary-container/10 p-2 rounded-full" style="font-variation-settings:'FILL'1">campaign</span></div>
+<div><h3 class="font-headline-md text-headline-md text-on-surface">4</h3><p class="font-label-md text-label-md text-on-surface-variant">Active Campaigns</p></div>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-outline-variant flex flex-col justify-between h-32">
+<div class="flex items-center justify-between"><span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-full" style="font-variation-settings:'FILL'1">description</span></div>
+<div><h3 class="font-headline-md text-headline-md text-on-surface">12</h3><p class="font-label-md text-label-md text-on-surface-variant">Proposals</p></div>
+</div>
+<div class="col-span-2 bg-primary-container text-on-primary p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.12)] flex items-center justify-between h-32 relative overflow-hidden">
+<div class="z-10"><p class="font-label-md text-label-md opacity-90 mb-xs">Total Spent</p><h3 class="font-display-lg-mobile text-display-lg-mobile">$2.5k</h3></div>
+<div class="z-10 bg-on-primary/20 p-3 rounded-full backdrop-blur-sm"><span class="material-symbols-outlined text-on-primary" style="font-variation-settings:'FILL'1">payments</span></div>
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-fixed/20 rounded-full blur-2xl"></div>
+<div class="absolute -left-8 -bottom-8 w-24 h-24 bg-inverse-primary/20 rounded-full blur-xl"></div>
+</div>
+</section>
+<section class="mt-md">
+<div class="flex justify-between items-end mb-sm"><h2 class="font-headline-sm text-headline-sm text-on-surface">Active Campaigns</h2><a class="font-label-md text-label-md text-primary font-semibold hover:underline" href="#">View All</a></div>
+<div class="space-y-sm">
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-outline-variant">
+<div class="flex justify-between items-start mb-xs"><div><h4 class="font-body-md text-body-md font-semibold text-on-surface">Tech Review Q3</h4><p class="font-label-sm text-label-sm text-on-surface-variant">3 Creators &bull; Due Oct 15</p></div><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-1 rounded-full">In Progress</span></div>
+<div class="mt-xs"><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1"><span>Deliverables</span><span>65%</span></div><div class="w-full bg-surface-container-high rounded-full h-2"><div class="bg-primary-container h-2 rounded-full" style="width:65%"></div></div></div>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-outline-variant">
+<div class="flex justify-between items-start mb-xs"><div><h4 class="font-body-md text-body-md font-semibold text-on-surface">App Launch Promo</h4><p class="font-label-sm text-label-sm text-on-surface-variant">1 Creator &bull; Due Nov 01</p></div><span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-full">Reviewing</span></div>
+<div class="mt-xs"><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1"><span>Deliverables</span><span>90%</span></div><div class="w-full bg-surface-container-high rounded-full h-2"><div class="bg-primary-container h-2 rounded-full" style="width:90%"></div></div></div>
+</div>
+</div>
+</section>
+<section class="mt-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Recent Activity</h2>
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-outline-variant">
+<ol class="relative border-l border-outline-variant ml-3 space-y-6">
+<li class="pl-6"><span class="absolute flex items-center justify-center w-6 h-6 bg-surface-container-lowest rounded-full -left-3 ring-4 ring-surface-container-lowest"><span class="material-symbols-outlined text-primary text-sm">drafts</span></span><h3 class="font-body-md text-body-md font-semibold text-on-surface">Proposal Received</h3><p class="font-label-md text-label-md text-on-surface-variant mt-1">From <span class="font-semibold">Abebe Bikila</span> for Tech Review Q3.</p><time class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">2 hours ago</time></li>
+<li class="pl-6"><span class="absolute flex items-center justify-center w-6 h-6 bg-surface-container-lowest rounded-full -left-3 ring-4 ring-surface-container-lowest"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span></span><h3 class="font-body-md text-body-md font-semibold text-on-surface">Deliverable Approved</h3><p class="font-label-md text-label-md text-on-surface-variant mt-1">Video draft for App Launch Promo approved.</p><time class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">Yesterday, 4:30 PM</time></li>
+<li class="pl-6"><span class="absolute flex items-center justify-center w-6 h-6 bg-surface-container-lowest rounded-full -left-3 ring-4 ring-surface-container-lowest"><span class="material-symbols-outlined text-tertiary-container text-sm">payments</span></span><h3 class="font-body-md text-body-md font-semibold text-on-surface">Payment Sent</h3><p class="font-label-md text-label-md text-on-surface-variant mt-1">Milestone 1 payment released for Campaign X.</p><time class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">Oct 10, 2023</time></li>
+</ol>
+</div>
+</section>
+</main>
+<button class="fixed bottom-24 right-4 z-40 bg-secondary-container text-on-secondary-container p-4 rounded-2xl shadow-[0_4px_14px_rgba(0,0,0,0.25)] hover:bg-secondary-fixed transition-colors flex items-center justify-center md:hidden"><span class="material-symbols-outlined" style="font-variation-settings:'FILL'1">add</span></button>
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface shadow-[0_-4px_12px_rgba(0,0,0,0.12)] flex justify-around items-center h-20 pb-safe px-2 md:hidden">
+<a href="index.html" class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1"><span class="material-symbols-outlined">explore</span><span class="font-label-sm text-label-sm mt-1">Explore</span></a>
+<a href="browse.html" class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 rounded-full"><span class="material-symbols-outlined">calendar_today</span><span class="font-label-sm text-label-sm mt-1">Bookings</span></a>
+<a href="#" class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 rounded-full"><span class="material-symbols-outlined">chat_bubble</span><span class="font-label-sm text-label-sm mt-1">Messages</span></a>
+<a href="profile.html" class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 rounded-full"><span class="material-symbols-outlined">person</span><span class="font-label-sm text-label-sm mt-1">Profile</span></a>
+</nav>
+</body>
+</html>

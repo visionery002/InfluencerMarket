@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EthioInfluence - Browse Influencers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-highest": "#e1e3e4", "on-primary-container": "#90d689",
+        "on-tertiary-fixed-variant": "#474746", "outline-variant": "#c0c9bb",
+        "secondary": "#855400", "inverse-surface": "#2e3132",
+        "on-primary-fixed-variant": "#0c5216", "inverse-on-surface": "#f0f1f2",
+        "on-tertiary-container": "#c6c4c3", "on-error-container": "#93000a",
+        "primary-fixed": "#acf4a4", "primary-fixed-dim": "#91d78a",
+        "surface-tint": "#2a6b2c", "outline": "#717a6d",
+        "on-secondary-fixed-variant": "#653e00", "on-primary-fixed": "#002203",
+        "error-container": "#ffdad6", "primary-container": "#1b5e20",
+        "on-tertiary": "#ffffff", "surface": "#f8f9fa",
+        "on-error": "#ffffff", "surface-container-high": "#e7e8e9",
+        "tertiary-fixed": "#e5e2e1", "secondary-container": "#ffa504",
+        "primary": "#00450d", "on-primary": "#ffffff",
+        "on-secondary-container": "#684100", "tertiary": "#3b3a3a",
+        "error": "#ba1a1a", "secondary-fixed-dim": "#ffb95c",
+        "inverse-primary": "#91d78a", "on-secondary-fixed": "#2a1700",
+        "on-surface-variant": "#41493e", "surface-bright": "#f8f9fa",
+        "surface-variant": "#e1e3e4", "on-secondary": "#ffffff",
+        "on-surface": "#191c1d", "surface-container-low": "#f3f4f5",
+        "tertiary-container": "#525151", "secondary-fixed": "#ffddb7",
+        "surface-dim": "#d9dadb", "background": "#f8f9fa",
+        "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#1b1c1c",
+        "on-background": "#191c1d", "surface-container": "#edeeef",
+        "tertiary-fixed-dim": "#c8c6c5"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: {
+        md: "24px", gutter: "24px", lg: "40px", "margin-mobile": "16px",
+        "margin-desktop": "48px", xs: "8px", xl: "64px", sm: "16px", base: "4px"
+      },
+      fontFamily: {
+        "display-lg-mobile": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"],
+        "body-md": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"],
+        "display-lg": ["Inter"], "label-sm": ["Inter"]
+      },
+      fontSize: {
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }]
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #191c1d; }
+.card-elevation { box-shadow: 0 4px 12px rgba(0,0,0,0.12); border: 1px solid #E0E0E0; }
+.card-elevation:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.18); transform: translateY(-2px); transition: all 0.2s ease-in-out; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background min-h-screen flex flex-col font-body-md text-on-background">
+<header class="bg-surface-container-lowest shadow-sm docked full-width top-0 sticky z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-margin-mobile md:px-margin-desktop py-base">
+<div class="flex items-center gap-xs">
+<a href="index.html" class="font-headline-sm text-headline-sm font-bold text-primary">EthioInfluence</a>
+</div>
+<div class="flex-1 flex justify-start pl-md">
+<div class="relative w-64 hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface rounded-lg border-outline-variant focus:border-primary-container focus:ring-0 text-sm placeholder-on-surface-variant transition-colors" placeholder="Search..." type="text"/>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="marketplace.html">Marketplace</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md px-2 py-1 rounded" href="dashboard.html">Campaigns</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md px-2 py-1 rounded" href="#">Messages</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md px-2 py-1 rounded" href="#">Analytics</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full"><span class="material-symbols-outlined">notifications</span></button>
+<button class="hidden md:flex bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:bg-primary transition-colors">Create Brief</button>
+<img alt="User avatar" class="w-8 h-8 rounded-full object-cover ml-2 border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMUbdOODJ65hm2jjEa_hQCOaEzJeo8A4igt2veG-VNFsC57GIiIvijgpFHxG5Eq8hJzEdOZBIKdzee0YhsyFFtf8ms1IgSPkmQjdpHA5f4uCy1GIQSGhQ6EHZJ6i33T_spheieOI_dhT5FUJiflGbyTtDY8FU03vwCzy3eGZceFbTbnuNsXm3UJaJ1_jnJkFBTO3eZ5i8gGgTNFqgMyx2NX-jqfoFTqrSRYINNwmP_NhY7KTWGTyvl9YqFNB0crB8YIwe-VXlmvyMT"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop py-lg flex flex-col md:flex-row gap-lg">
+<aside class="w-full md:w-64 flex-shrink-0 flex flex-col gap-md">
+<div class="bg-surface-container-lowest card-elevation rounded-xl p-md">
+<div class="flex items-center justify-between mb-sm">
+<h2 class="font-headline-sm text-headline-sm text-primary">Filters</h2>
+<button class="text-on-surface-variant hover:text-primary text-sm font-medium">Clear</button>
+</div>
+<div class="flex flex-col gap-md">
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold mb-2">Platform</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 cursor-pointer"><input class="rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/><span class="text-sm">Instagram</span></label>
+<label class="flex items-center gap-2 cursor-pointer"><input class="rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/><span class="text-sm">TikTok</span></label>
+<label class="flex items-center gap-2 cursor-pointer"><input class="rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/><span class="text-sm">YouTube</span></label>
+</div>
+</div>
+<div class="h-px bg-surface-container-highest w-full"></div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold mb-2">Niche</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 cursor-pointer"><input class="rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/><span class="text-sm">Fashion</span></label>
+<label class="flex items-center gap-2 cursor-pointer"><input class="rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/><span class="text-sm">Tech</span></label>
+<label class="flex items-center gap-2 cursor-pointer"><input class="rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/><span class="text-sm">Travel</span></label>
+<label class="flex items-center gap-2 cursor-pointer"><input class="rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/><span class="text-sm">Lifestyle</span></label>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<section class="flex-1 flex flex-col gap-lg">
+<div class="relative w-full md:hidden mb-sm">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-lowest rounded-xl border border-outline-variant focus:border-primary-container focus:ring-0 text-sm" placeholder="Search influencers..." type="text"/>
+</div>
+<div class="flex justify-between items-end border-b border-surface-container-highest pb-sm">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Browse Influencers</h1>
+<p class="text-on-surface-variant mt-1 text-sm">Discover top Ethiopian talent for your next campaign.</p>
+</div>
+<div class="hidden sm:flex items-center gap-2">
+<span class="text-sm text-on-surface-variant">Sort by:</span>
+<select class="bg-surface-container-lowest border-outline-variant rounded-lg text-sm py-1 pl-2 pr-8 focus:ring-primary-container focus:border-primary-container">
+<option>Recommended</option>
+<option>Followers (High to Low)</option>
+<option>Engagement Rate</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+<div class="bg-surface-container-lowest rounded-xl card-elevation flex flex-col p-md relative group">
+<div class="flex justify-between items-start mb-sm">
+<div class="relative">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-surface-container-lowest shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj9heODIDFJ3dzymc3vidyneyUQQTU4j_4G4lHdJWIf7jAC5-xsAGFullilRTSQxssYleTPN06SVJr6J0ACldOXQ6Ef_d14wnMIOuAIZ_P4oo4D72zbQvJaVh3YGwDeDm2QT7eVbfiUJJ2-a-MS3c9cHjCaTS4DEgZuTHWqklVT7BegP9SEB0I9z6iomH7-kFEPV7slsO1U872m9iTvBvxhFRBVexVTR9pabW5hs3Sp797oQJtORcLrOh61JBCznpiRs9zmN8kaUYn"/>
+<div class="absolute bottom-0 right-0 bg-[#4CAF50] w-3 h-3 rounded-full border-2 border-white" title="Online"></div>
+</div>
+<span class="bg-surface-container text-on-surface-variant text-xs font-semibold px-2 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">favorite</span> 4.8%
+</span>
+</div>
+<div class="mb-sm flex-1">
+<div class="flex items-center gap-1">
+<h3 class="font-headline-sm text-lg text-on-surface">Selamawit T.</h3>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-2">@selam_styles</p>
+<div class="flex flex-wrap gap-1 mb-3">
+<span class="bg-[#EEEEEE] text-[#757575] text-xs px-2 py-0.5 rounded-full">Fashion</span>
+<span class="bg-[#EEEEEE] text-[#757575] text-xs px-2 py-0.5 rounded-full">Lifestyle</span>
+</div>
+<p class="text-sm text-on-surface line-clamp-2">Sharing modern Ethiopian fashion and everyday lifestyle tips.</p>
+</div>
+<a href="profile.html" class="block w-full bg-primary-container text-on-primary py-2 rounded-lg text-center font-label-md text-label-md hover:bg-primary transition-colors mt-auto">Message</a>
+</div>
+<div class="bg-surface-container-lowest rounded-xl card-elevation flex flex-col p-md relative group">
+<div class="flex justify-between items-start mb-sm">
+<div class="relative">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-surface-container-lowest shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvUF9y0yEjZH36yDznVFy6erfBKPEUJxOYrFEKFc0M9ECVKoY7hMexUfzxP3ZtorJ8BnFWUvQaGfKhjBZUZW9DOL6nJdurzXJkvNzzjQYLyPqTi1FY7c10IRAEUSOSJpFZ5r953O3iDIh3t1fUuPytu0Plx6SRIxKkEWf7EjvldJ9Y06ATyJuYKh9Li2SP76KLhverLFTT8A4T_Ezy31Tt_vrzcQXc4_vakQWoi8OfDuQ3K6rvgrj2nEdpgfolf7wezcvHgk70e6Pr"/>
+<div class="absolute bottom-0 right-0 bg-[#4CAF50] w-3 h-3 rounded-full border-2 border-white"></div>
+</div>
+<span class="bg-surface-container text-on-surface-variant text-xs font-semibold px-2 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">favorite</span> 5.2%
+</span>
+</div>
+<div class="mb-sm flex-1">
+<div class="flex items-center gap-1">
+<h3 class="font-headline-sm text-lg text-on-surface">Dawit Tech</h3>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-2">@dawit_reviews</p>
+<div class="flex flex-wrap gap-1 mb-3">
+<span class="bg-[#EEEEEE] text-[#757575] text-xs px-2 py-0.5 rounded-full">Tech</span>
+<span class="bg-[#EEEEEE] text-[#757575] text-xs px-2 py-0.5 rounded-full">Gadgets</span>
+</div>
+<p class="text-sm text-on-surface line-clamp-2">Honest reviews of the latest gadgets available in East Africa.</p>
+</div>
+<a href="profile.html" class="block w-full bg-primary-container text-on-primary py-2 rounded-lg text-center font-label-md text-label-md hover:bg-primary transition-colors mt-auto">Message</a>
+</div>
+<div class="bg-surface-container-lowest rounded-xl card-elevation flex flex-col p-md relative group">
+<div class="flex justify-between items-start mb-sm">
+<div class="relative">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-surface-container-lowest shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdENucvrapINl8NnweiC4llGJGB_u8tP0X3_G54n0fGqaE97q5BJC_W58DFPZGk7FmofGRTMNiXWWEivPU_6GoiBxAUt3zoT37uuEccZB04cxVX0I2FKyNO7fe1DY2wDr3gMPR9rh0VbIbHRCFLzJptJBvZyF9H3V-mr3Dgs9sAy_s4MxywNU0qlOupPwyjauoIgbIWRwXl-v0AvdpW_sL-9Ko1T_tYzloSRBYv5Wmr5OdGxhW9709PDAdtaeRycBHa7nfK0krTx7v"/>
+</div>
+<span class="bg-surface-container text-on-surface-variant text-xs font-semibold px-2 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">favorite</span> 3.9%
+</span>
+</div>
+<div class="mb-sm flex-1">
+<div class="flex items-center gap-1"><h3 class="font-headline-sm text-lg text-on-surface">Hanna Travel</h3></div>
+<p class="text-sm text-on-surface-variant mb-2">@explorewithhanna</p>
+<div class="flex flex-wrap gap-1 mb-3">
+<span class="bg-[#EEEEEE] text-[#757575] text-xs px-2 py-0.5 rounded-full">Travel</span>
+<span class="bg-[#EEEEEE] text-[#757575] text-xs px-2 py-0.5 rounded-full">Culture</span>
+</div>
+<p class="text-sm text-on-surface line-clamp-2">Showcasing the hidden gems and rich culture of Ethiopia to the world.</p>
+</div>
+<a href="profile.html" class="block w-full bg-primary-container text-on-primary py-2 rounded-lg text-center font-label-md text-label-md hover:bg-primary transition-colors mt-auto">Message</a>
+</div>
+</div>
+<div class="flex justify-center items-center mt-lg gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant disabled:opacity-50" disabled><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button class="w-8 h-8 rounded bg-primary-container text-on-primary font-medium text-sm flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low font-medium text-sm">2</button>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low font-medium text-sm">3</button>
+<span class="text-on-surface-variant text-sm px-1">...</span>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-highest full-width py-lg mt-xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">EthioInfluence</span>
+<nav class="flex flex-wrap justify-center gap-sm">
+<a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm hover:underline" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm hover:underline" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm hover:underline" href="#">Contact Support</a>
+<a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm hover:underline" href="#">About Us</a>
+</nav>
+<p class="font-body-md text-body-md text-on-surface text-center md:text-right">&copy; 2024 EthioInfluence. Modern Ethiopian Professionalism.</p>
+</div>
+</footer>
+</body>
+</html>

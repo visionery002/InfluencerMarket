@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EthioInfluence - Organization Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-highest": "#e1e3e4", "on-primary-container": "#90d689",
+        "on-tertiary-fixed-variant": "#474746", "outline-variant": "#c0c9bb",
+        "secondary": "#855400", "inverse-surface": "#2e3132",
+        "on-primary-fixed-variant": "#0c5216", "inverse-on-surface": "#f0f1f2",
+        "on-tertiary-container": "#c6c4c3", "on-error-container": "#93000a",
+        "primary-fixed": "#acf4a4", "primary-fixed-dim": "#91d78a",
+        "surface-tint": "#2a6b2c", "outline": "#717a6d",
+        "on-secondary-fixed-variant": "#653e00", "on-primary-fixed": "#002203",
+        "error-container": "#ffdad6", "primary-container": "#1b5e20",
+        "on-tertiary": "#ffffff", "surface": "#f8f9fa",
+        "on-error": "#ffffff", "surface-container-high": "#e7e8e9",
+        "tertiary-fixed": "#e5e2e1", "secondary-container": "#ffa504",
+        "primary": "#00450d", "on-primary": "#ffffff",
+        "on-secondary-container": "#684100", "tertiary": "#3b3a3a",
+        "error": "#ba1a1a", "secondary-fixed-dim": "#ffb95c",
+        "inverse-primary": "#91d78a", "on-secondary-fixed": "#2a1700",
+        "on-surface-variant": "#41493e", "surface-bright": "#f8f9fa",
+        "surface-variant": "#e1e3e4", "on-secondary": "#ffffff",
+        "on-surface": "#191c1d", "surface-container-low": "#f3f4f5",
+        "tertiary-container": "#525151", "secondary-fixed": "#ffddb7",
+        "surface-dim": "#d9dadb", "background": "#f8f9fa",
+        "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#1b1c1c",
+        "on-background": "#191c1d", "surface-container": "#edeeef",
+        "tertiary-fixed-dim": "#c8c6c5"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: {
+        md: "24px", gutter: "24px", lg: "40px", "margin-mobile": "16px",
+        "margin-desktop": "48px", xs: "8px", xl: "64px", sm: "16px", base: "4px"
+      },
+      fontFamily: {
+        "display-lg-mobile": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"],
+        "body-md": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"],
+        "display-lg": ["Inter"], "label-sm": ["Inter"]
+      },
+      fontSize: {
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }]
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<aside class="bg-surface-container-low h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col gap-xs p-md z-40 border-r border-outline-variant/30">
+<div class="flex items-center gap-sm mb-lg">
+<img alt="Brand Logo" class="w-12 h-12 rounded-full object-cover shadow-sm bg-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyFxNHYAAR2LPZrJZKoWsuSbs9QltaeFxI6KiagK7dSzXns53PKl-QMAlTnjCfJGsiWKQ3kCffkdCDVu3TAFqnGS3ju5_-CTBU2suAB0ANirQcR-iWSFDCvGNe2I_dVOzGYcmKIeHO39CO0MLDonskXXQ9xRoZaJ64gmbNtc4WkhVf2E2HJsgZI18_BObGY9ULqofeHJs7slYqqBshgMC3MB1hfY9n5-oZF-icTnoTxNMHBQpMnnkl_ZK9fk7Ivgu8V1QTQ1o7M5pi"/>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Brand Panel</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Premium Account</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-xs">
+<a class="flex items-center gap-sm p-sm bg-primary-container text-on-primary-container font-bold rounded-xl" href="dashboard.html"><span class="material-symbols-outlined" style="font-variation-settings:'FILL'1">dashboard</span><span class="font-label-md text-label-md">Dashboard</span></a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-xl" href="marketplace.html"><span class="material-symbols-outlined">groups</span><span class="font-label-md text-label-md">Influencers</span></a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-xl" href="#"><span class="material-symbols-outlined">work</span><span class="font-label-md text-label-md">Jobs</span></a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-xl" href="#"><span class="material-symbols-outlined">chat</span><span class="font-label-md text-label-md">Messages</span></a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-xl" href="#"><span class="material-symbols-outlined">analytics</span><span class="font-label-md text-label-md">Reports</span></a>
+</nav>
+<div class="mt-auto flex flex-col gap-sm">
+<button class="w-full bg-primary-container text-on-primary font-label-md text-label-md py-sm rounded-lg hover:brightness-110 transition-all shadow-sm">Post a Job</button>
+<div class="flex flex-col gap-xs pt-sm border-t border-outline-variant/30">
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-xl" href="#"><span class="material-symbols-outlined">settings</span><span class="font-label-md text-label-md">Settings</span></a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-xl" href="#"><span class="material-symbols-outlined">help</span><span class="font-label-md text-label-md">Support</span></a>
+</div>
+</div>
+</aside>
+<div class="flex-1 lg:ml-64 flex flex-col min-h-screen relative">
+<header class="bg-surface-container-lowest full-width top-0 sticky z-50 shadow-sm">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-margin-mobile md:px-margin-desktop py-base h-16">
+<div class="flex items-center gap-sm">
+<button class="lg:hidden text-on-surface-variant p-xs"><span class="material-symbols-outlined">menu</span></button>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">EthioInfluence</span>
+</div>
+<nav class="hidden md:flex gap-md items-center h-full">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary px-sm py-2 rounded-md" href="marketplace.html">Marketplace</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 h-full flex items-center px-sm" href="dashboard.html">Campaigns</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary px-sm py-2 rounded-md" href="#">Messages</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary px-sm py-2 rounded-md" href="#">Analytics</a>
+</nav>
+<div class="flex items-center gap-sm md:gap-md">
+<button class="hidden md:block bg-surface-container-highest text-on-surface font-label-md text-label-md px-sm py-2 rounded-lg hover:bg-surface-container-high">Create Brief</button>
+<button class="text-on-surface-variant hover:text-primary p-xs relative"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button>
+<img alt="User avatar" class="w-8 h-8 rounded-full object-cover bg-surface-container border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLJEOog2jvCIqIwDmNr6kvQYZiUVW4Ugnhk0iq9HM56s2m-aU4TMB8M2NWkfsn54lDCKVW19_nFza2HfIFn5JKivciQINnNI_FAu7IKWKAPIH0RIvjEE5Dh4f73nrdQYnQD5WYtiAFWw9QBq1qb82PJ0YKQxoV8VMbNvKSVduLSHVYaD1ZStSh9BXe2BjOGURGS2lJdjzoF2sElW_dSy7p5wCkOQAe8RN74kQsjpzDQf01w57__etQSTpHr38qhod8vUgxIxqmDo7p"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl w-full mx-auto px-margin-mobile md:px-margin-desktop py-lg space-y-lg relative z-0">
+<section class="flex flex-col md:flex-row justify-between items-start md:items-end gap-sm">
+<div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Hello, TechEthio</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Here's what's happening with your campaigns today.</p>
+</div>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-md py-sm rounded-lg hover:brightness-110 transition-all shadow-sm flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">add</span> New Campaign</button>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-surface-container-lowest p-md rounded-[16px] shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-outline-variant/20 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+<div class="flex items-center justify-between relative z-10"><span class="font-label-md text-label-md text-on-surface-variant">Active Campaigns</span><span class="material-symbols-outlined text-primary bg-primary/10 p-xs rounded-full">campaign</span></div>
+<div class="relative z-10"><span class="font-headline-md text-headline-md text-on-surface">4</span><span class="font-label-sm text-label-sm text-[#4CAF50] ml-sm bg-[#4CAF50]/10 px-2 py-1 rounded-full">+1 this week</span></div>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-[16px] shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-outline-variant/20 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary-container/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+<div class="flex items-center justify-between relative z-10"><span class="font-label-md text-label-md text-on-surface-variant">Proposals Received</span><span class="material-symbols-outlined text-secondary-container bg-secondary-container/10 p-xs rounded-full">description</span></div>
+<div class="relative z-10"><span class="font-headline-md text-headline-md text-on-surface">12</span><span class="font-label-sm text-label-sm text-on-surface-variant ml-sm bg-surface-container px-2 py-1 rounded-full">3 awaiting review</span></div>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-[16px] shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-outline-variant/20 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary-container/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+<div class="flex items-center justify-between relative z-10"><span class="font-label-md text-label-md text-on-surface-variant">Total Spent</span><span class="material-symbols-outlined text-primary-container bg-primary-container/10 p-xs rounded-full">payments</span></div>
+<div class="relative z-10"><span class="font-headline-md text-headline-md text-on-surface">$2.5k</span><span class="font-label-sm text-label-sm text-on-surface-variant ml-sm">Current month</span></div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-md">
+<section class="lg:col-span-2 bg-surface-container-lowest rounded-[16px] shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-outline-variant/20 overflow-hidden flex flex-col">
+<div class="p-md border-b border-outline-variant/20 flex justify-between items-center bg-surface-bright">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Active Campaigns</h3>
+<button class="text-primary font-label-sm text-label-sm hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest border-b border-outline-variant/20 text-on-surface-variant font-label-sm text-label-sm">
+<th class="p-md font-medium">Campaign Name</th><th class="p-md font-medium">Influencer</th><th class="p-md font-medium">Status</th><th class="p-md font-medium w-1/4">Progress</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-lowest/50 transition-colors">
+<td class="p-md font-medium">Addis Tech Launch</td>
+<td class="p-md flex items-center gap-xs"><img alt="Influencer" class="w-8 h-8 rounded-full object-cover bg-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZhDRxcg6gZhSdCoQPQYUwwjBe1dPGqQnM1uR6mpW63dBmwgzgXDW9N2owHsbfsEO9TmGf5AIU4bOC6fG37cnzusRmyxwpyL95VfP_F8CXVCvf9HWa5-fil0WF_pZaqD5zB_04d6grdKxmdXDfHa49pM41x9pz_L0OUc1-qLfW9mCfmPKdwm1Ld520-5tIW-k6TFCZgp4iWuBkBUoVgdEEWCKVad0xp0JWFif1-dyPWF0S7Qlyiql3Z30TFQW09uYm-xLxSPu_C4sH"/> Elias M.</td>
+<td class="p-md"><span class="inline-flex items-center gap-1 bg-surface-container px-2 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary-container"></span> In Progress</span></td>
+<td class="p-md"><div class="flex items-center gap-sm"><div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden"><div class="bg-primary-container h-2 rounded-full" style="width: 65%"></div></div><span class="font-label-sm text-label-sm text-on-surface-variant">65%</span></div></td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-lowest/50 transition-colors">
+<td class="p-md font-medium">Summer Lifestyle Push</td>
+<td class="p-md flex items-center gap-xs"><img alt="Influencer" class="w-8 h-8 rounded-full object-cover bg-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyt3xbeOtoL7_D_Cr_MX2mC_APWGnow0uVY7YonFiejT2nymw1_GcoRrk4CTvMZz1-Vu0G_eKwbeCCpwOWbu7KQQZHoCmtekhVM9uvSAIb0mJ3iDFdTPldE1Yxf6XqZjN6LmcYok_32LXsWWrdgt2FH90PZ7zZHmz_OodBtR5Z92Wm7HsOf4ROFhs_wrI9tFrJyp7C9358g2h_nIg_5awZYECYAOWMcAH7oaEaZT2fb0gk5LzpCGdMQEO4-L1HQXz-YFGxC41S87hy"/> Sara T.</td>
+<td class="p-md"><span class="inline-flex items-center gap-1 bg-surface-container px-2 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary-container"></span> In Progress</span></td>
+<td class="p-md"><div class="flex items-center gap-sm"><div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden"><div class="bg-primary-container h-2 rounded-full" style="width: 30%"></div></div><span class="font-label-sm text-label-sm text-on-surface-variant">30%</span></div></td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/50 transition-colors">
+<td class="p-md font-medium">Fintech Awareness</td>
+<td class="p-md flex items-center gap-xs"><div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-label-sm text-label-sm text-on-surface-variant border border-outline-variant/30">JD</div> J. Doe</td>
+<td class="p-md"><span class="inline-flex items-center gap-1 bg-[#4CAF50]/10 px-2 py-1 rounded-full font-label-sm text-label-sm text-[#4CAF50]"><span class="w-2 h-2 rounded-full bg-[#4CAF50]"></span> Reviewing</span></td>
+<td class="p-md"><div class="flex items-center gap-sm"><div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden"><div class="bg-[#4CAF50] h-2 rounded-full" style="width: 90%"></div></div><span class="font-label-sm text-label-sm text-on-surface-variant">90%</span></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="bg-surface-container-lowest rounded-[16px] shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-outline-variant/20 flex flex-col h-full">
+<div class="p-md border-b border-outline-variant/20 flex justify-between items-center bg-surface-bright"><h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Activity</h3></div>
+<div class="p-md flex-1 overflow-y-auto space-y-md">
+<div class="flex gap-sm items-start relative pb-md">
+<div class="absolute left-4 top-8 bottom-0 w-px bg-outline-variant/30 -ml-px"></div>
+<div class="w-8 h-8 rounded-full bg-[#4CAF50]/10 flex items-center justify-center flex-shrink-0 z-10 border border-surface-container-lowest"><span class="material-symbols-outlined text-[16px] text-[#4CAF50]">check_circle</span></div>
+<div class="flex-1"><p class="font-body-md text-body-md text-on-surface"><span class="font-medium">Abel</span> accepted your proposal</p><p class="font-label-sm text-label-sm text-on-surface-variant mt-1">2 hours ago &bull; Addis Tech Launch</p></div>
+</div>
+<div class="flex gap-sm items-start relative pb-md">
+<div class="absolute left-4 top-8 bottom-0 w-px bg-outline-variant/30 -ml-px"></div>
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 z-10 border border-surface-container-lowest"><span class="material-symbols-outlined text-[16px] text-primary">upload_file</span></div>
+<div class="flex-1"><p class="font-body-md text-body-md text-on-surface"><span class="font-medium">Sara T.</span> uploaded a draft</p><p class="font-label-sm text-label-sm text-on-surface-variant mt-1">5 hours ago &bull; Summer Lifestyle Push</p></div>
+</div>
+<div class="flex gap-sm items-start relative">
+<div class="w-8 h-8 rounded-full bg-secondary-container/10 flex items-center justify-center flex-shrink-0 z-10 border border-surface-container-lowest"><span class="material-symbols-outlined text-[16px] text-secondary-container">forum</span></div>
+<div class="flex-1"><p class="font-body-md text-body-md text-on-surface">New message from <span class="font-medium">J. Doe</span></p><p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Yesterday &bull; Fintech Awareness</p></div>
+</div>
+</div>
+<div class="p-md border-t border-outline-variant/10 text-center"><button class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors">View All Activity</button></div>
+</section>
+</div>
+</main>
+</div>
+</body>
+</html>

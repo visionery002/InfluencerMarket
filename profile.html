@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EthioInfluence - Influencer Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-highest": "#e1e3e4", "on-primary-container": "#90d689",
+        "on-tertiary-fixed-variant": "#474746", "outline-variant": "#c0c9bb",
+        "secondary": "#855400", "inverse-surface": "#2e3132",
+        "on-primary-fixed-variant": "#0c5216", "inverse-on-surface": "#f0f1f2",
+        "on-tertiary-container": "#c6c4c3", "on-error-container": "#93000a",
+        "primary-fixed": "#acf4a4", "primary-fixed-dim": "#91d78a",
+        "surface-tint": "#2a6b2c", "outline": "#717a6d",
+        "on-secondary-fixed-variant": "#653e00", "on-primary-fixed": "#002203",
+        "error-container": "#ffdad6", "primary-container": "#1b5e20",
+        "on-tertiary": "#ffffff", "surface": "#f8f9fa",
+        "on-error": "#ffffff", "surface-container-high": "#e7e8e9",
+        "tertiary-fixed": "#e5e2e1", "secondary-container": "#ffa504",
+        "primary": "#00450d", "on-primary": "#ffffff",
+        "on-secondary-container": "#684100", "tertiary": "#3b3a3a",
+        "error": "#ba1a1a", "secondary-fixed-dim": "#ffb95c",
+        "inverse-primary": "#91d78a", "on-secondary-fixed": "#2a1700",
+        "on-surface-variant": "#41493e", "surface-bright": "#f8f9fa",
+        "surface-variant": "#e1e3e4", "on-secondary": "#ffffff",
+        "on-surface": "#191c1d", "surface-container-low": "#f3f4f5",
+        "tertiary-container": "#525151", "secondary-fixed": "#ffddb7",
+        "surface-dim": "#d9dadb", "background": "#f8f9fa",
+        "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#1b1c1c",
+        "on-background": "#191c1d", "surface-container": "#edeeef",
+        "tertiary-fixed-dim": "#c8c6c5"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: {
+        md: "24px", gutter: "24px", lg: "40px", "margin-mobile": "16px",
+        "margin-desktop": "48px", xs: "8px", xl: "64px", sm: "16px", base: "4px"
+      },
+      fontFamily: {
+        "display-lg-mobile": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"],
+        "body-md": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"],
+        "display-lg": ["Inter"], "label-sm": ["Inter"]
+      },
+      fontSize: {
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }]
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #191c1d; }
+.card-elevation-1 { background-color: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.12); border: 1px solid #e1e3e4; border-radius: 0.5rem; }
+.card-elevation-1:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.18); transform: translateY(-2px); }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="text-on-surface antialiased flex flex-col min-h-screen">
+<nav class="bg-surface-container-lowest shadow-sm full-width top-0 sticky z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-margin-mobile md:px-margin-desktop py-base">
+<div class="flex items-center gap-md">
+<a class="text-headline-sm font-headline-sm font-bold text-primary" href="index.html">EthioInfluence</a>
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="marketplace.html">Marketplace</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md px-2 py-1 rounded" href="dashboard.html">Campaigns</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md px-2 py-1 rounded" href="#">Messages</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md px-2 py-1 rounded" href="#">Analytics</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:text-primary p-2 rounded-full hover:bg-surface-container-low"><span class="material-symbols-outlined">notifications</span></button>
+<button class="bg-primary text-on-primary px-sm py-2 rounded font-label-md text-label-md hover:bg-surface-tint hidden md:block">Create Brief</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant">
+<img alt="User avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbYOZCuBSQBADSST6qxJnwIziDxWHJZ9VGWlchQe_1qQkDz8OT2unr0y3IN4uPs_3KpQKpC8FEpRCoTeDCjSUip5V4aK42MvMbbH3nohhao5OQhpl50S8iYrQO_QKwd3AmRh7AgkM7mSknZVVV79Pfhpr3UT3qnvN8XD33kg7JQw8uM2jLh-zcdIErgzv7Z0vYb6H_gj2_ZwMQpOFuxGr-K1W7EF7f1y0Dh-kDPyCX3ck4ED5F8gLDZHhhV4FQD0ZiTkliJGFUt1ly"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-xl flex flex-col gap-xl">
+<section class="flex flex-col gap-xs">
+<div class="w-full h-48 md:h-64 rounded-xl overflow-hidden relative card-elevation-1">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBW2jJcqE0kGjPr6rAvrvHkKTaPSgYhQQi5Y8iKgrHsCHnqCm-ySydWYgk4216bwL2GwxqWbiMfd5G2lXVMgaWcwns_Hh8ghLjpBxIEIa3_2gf_odWSsYfAP40wU9RKFOC2Rrs5o02XcpfILxVok-kdU0LpoJM8eC9f8RONNjUSqqCDnAPK10mf2ZHJNhKOsuwTJm8zhvd_8J-I7VKah8uOfjRd7_mKK7_qkbmxxvNor6_WcLnnC1mxB8SBIHJ2LCZpvfV0-RLpqSF"/>
+</div>
+<div class="flex flex-col md:flex-row items-center md:items-end justify-between px-sm md:px-lg -mt-16 md:-mt-20 relative z-10 gap-sm">
+<div class="flex flex-col md:flex-row items-center md:items-end gap-sm md:gap-md">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-surface-container-lowest shadow-sm bg-surface">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM5DXwpqmbKx-XS3gKOfwuV927QS6qi_WqwvnNUj8nQuXhYo-zd1sOKfBuqUjYAthdgnI_hmFdDXG3zeF_5GLD6U7XwvhuaaZ9KAsChKt_uIeAtcJfdMp8zlAR--6BvVQPWMod6SsazgmiFZO2BKM_4QlOvuyXRfezpXKDAmqvPi6GZKbok37tMd_ZfnQI9eJlkxD2Yd4GGB2e-j7krS_Gslp6stAz-2lFtfrEqGxBXo4whPIa_l9F8o3M7ERpWhW88eT85fhVCRTc"/>
+</div>
+<div class="text-center md:text-left mb-2">
+<div class="flex items-center justify-center md:justify-start gap-2">
+<h1 class="font-headline-md text-headline-md text-on-surface">Edom Kassaye</h1>
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Lifestyle &amp; Tech Influencer</p>
+</div>
+</div>
+<div class="flex gap-xs mb-2">
+<button class="bg-surface-container-lowest border border-outline text-on-surface px-md py-2 rounded-lg font-label-md text-label-md hover:bg-surface-container-low shadow-sm">Save Profile</button>
+<button class="bg-primary-container text-on-primary px-md py-2 rounded-lg font-label-md text-label-md hover:bg-surface-tint shadow-sm">Contact Me</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm mt-md">
+<div class="card-elevation-1 p-sm flex flex-col items-center justify-center text-center"><span class="font-headline-sm text-headline-sm text-primary-container">250K</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Followers</span></div>
+<div class="card-elevation-1 p-sm flex flex-col items-center justify-center text-center"><span class="font-headline-sm text-headline-sm text-primary-container">4.8%</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Engagement</span></div>
+<div class="card-elevation-1 p-sm flex flex-col items-center justify-center text-center"><span class="font-headline-sm text-headline-sm text-primary-container">42</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Campaigns</span></div>
+<div class="card-elevation-1 p-sm flex flex-col items-center justify-center text-center">
+<div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm text-primary-container">4.9</span><span class="material-symbols-outlined text-secondary-container text-lg" style="font-variation-settings: 'FILL' 1;">star</span></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Rating</span>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<div class="col-span-1 flex flex-col gap-md">
+<div class="card-elevation-1 p-md flex flex-col gap-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface border-b border-surface-variant pb-2">About Me</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Addis Ababa based creator passionate about blending modern tech lifestyles with vibrant cultural elements. I specialize in high-quality video production and authentic storytelling that resonates with Gen-Z and Millennial audiences across East Africa.</p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">Lifestyle</span>
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">Technology</span>
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">Travel</span>
+</div>
+</div>
+<div class="card-elevation-1 p-md flex flex-col gap-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface border-b border-surface-variant pb-2">Social Reach</h2>
+<ul class="flex flex-col gap-2">
+<li class="flex items-center justify-between font-body-md text-body-md"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-on-surface-variant">photo_camera</span><span>Instagram</span></div><span class="font-label-md text-label-md">150K</span></li>
+<li class="flex items-center justify-between font-body-md text-body-md"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-on-surface-variant">play_circle</span><span>TikTok</span></div><span class="font-label-md text-label-md">85K</span></li>
+<li class="flex items-center justify-between font-body-md text-body-md"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-on-surface-variant">work</span><span>LinkedIn</span></div><span class="font-label-md text-label-md">15K</span></li>
+</ul>
+</div>
+</div>
+<div class="col-span-1 lg:col-span-2 flex flex-col gap-lg">
+<div class="flex flex-col gap-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recent Campaigns</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-xs">
+<div class="col-span-2 row-span-2 rounded-lg overflow-hidden card-elevation-1 h-64 md:h-auto relative group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPzN-hMqJeCb0O5LAeVW1PB43zYxd_FjRdojmM2Vj8H7NE4NnR1Ry-EqTy6DVXPygVdXO_6WQwS9nwhSi3x5hDfXKA1tBJe9pLJGA6H0fAMMen8Yi9AfPe-_Lkw3W0mLjExS1e52XETeF5yl8Nf0RpAeRrzQSmjTTbeR6164XaqTIx4nxcOLSPlWhecIfzYFqbuGQZNKoLqoZli6lUbOklscqniIpVYtRtb1yOcM6z5uTNMfotglJSkzfEJzrz1tkBn1YaiQr-c8QY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md"><span class="text-on-primary font-label-md text-label-md">Tech Launch Q3</span></div>
+</div>
+<div class="rounded-lg overflow-hidden card-elevation-1 h-32 md:h-48 relative group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh_Cn05SZvVgI3W_XITFgCHQ1kTyt21oB1yxYFQGMXzpM-rbYHNhzoP62Dj82mAYSSc3PBrDDIulVtor5ccIwKeoO-ZTdkOoMxVPF5wREoacIgzW7gdppVXiUEoC6P8ko8naSbv8PRxYUGQZT9uiouEYNBY6VmIMyc6aRNMVQo4WIZv9wFVLvFf2z-CPl0zR7Zcnnyd4EWJ3jeHNGzREIq4ftjhVphflC-zb6FZM7dWmB-j8AflPQ2jXTgU9HKgksMzp2PFB8pU_PV"/>
+</div>
+<div class="rounded-lg overflow-hidden card-elevation-1 h-32 md:h-48 relative group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5OLIhQ0knyUf4eUWPm7LSNpwIHnyRoCtG5rz2BAk6OY-PHm-n0TsRcJ-HVeZctAehxUIi-LOO64YHXKUfO1wmaXna6Qh8xOOFY9kwbamgUNGqJ9XwGO9CkYVgl6DYPvqdE7p36zAY4Rb5eQo7wOG1KrbWkP-lexh3CRvuvsfA3FFMWJZEpswPW4-bE6LDl6GUxYqHZJ4ddA0Y-8l8nbO8Kp1ZGCLl0sd47Teph7NzPHQt8kY2dy5KZrpvjWIwCPEQBKIEClSfjcDN"/>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Brand Feedback</h2>
+<div class="flex flex-col gap-sm">
+<div class="card-elevation-1 p-md flex flex-col gap-xs">
+<div class="flex justify-between items-start">
+<div><h3 class="font-label-md text-label-md text-on-surface font-semibold">EthioTelecom</h3><p class="font-label-sm text-label-sm text-on-surface-variant">5G Launch Campaign</p></div>
+<div class="flex text-secondary-container"><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">"Exceptional work! Edom delivered highly engaging content that perfectly matched our brand voice. The campaign exceeded our KPIs by 40%."</p>
+</div>
+<div class="card-elevation-1 p-md flex flex-col gap-xs">
+<div class="flex justify-between items-start">
+<div><h3 class="font-label-md text-label-md text-on-surface font-semibold">BrewLife Cafe</h3><p class="font-label-sm text-label-sm text-on-surface-variant">Morning Routine Series</p></div>
+<div class="flex text-secondary-container"><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL'1">star</span></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">"Professional, creative, and deeply understands our audience. The content felt authentic and drove incredible engagement."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body>
+</html>

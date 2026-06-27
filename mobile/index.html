@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>EthioInfluence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-secondary-fixed": "#2a1700", "on-primary-fixed": "#002203",
+        "tertiary-container": "#525151", "on-primary-container": "#90d689",
+        "secondary-fixed-dim": "#ffb95c", "on-surface": "#191c1d",
+        "on-primary": "#ffffff", "on-tertiary-fixed": "#1b1c1c",
+        "surface-bright": "#f8f9fa", "inverse-surface": "#2e3132",
+        "error-container": "#ffdad6", "error": "#ba1a1a",
+        "primary-fixed": "#acf4a4", "on-secondary-fixed-variant": "#653e00",
+        "surface-dim": "#d9dadb", "primary-fixed-dim": "#91d78a",
+        "surface-tint": "#2a6b2c", "tertiary": "#3b3a3a",
+        "surface-container-highest": "#e1e3e4", "primary-container": "#1b5e20",
+        "background": "#f8f9fa", "tertiary-fixed-dim": "#c8c6c5",
+        "secondary-fixed": "#ffddb7", "inverse-primary": "#91d78a",
+        "on-tertiary-fixed-variant": "#474746", "tertiary-fixed": "#e5e2e1",
+        "secondary-container": "#ffa504", "on-tertiary-container": "#c6c4c3",
+        "surface": "#f8f9fa", "on-background": "#191c1d",
+        "surface-container-high": "#e7e8e9", "on-secondary-container": "#684100",
+        "primary": "#00450d", "on-tertiary": "#ffffff",
+        "secondary": "#855400", "outline": "#717a6d",
+        "on-error-container": "#93000a", "on-surface-variant": "#41493e",
+        "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff",
+        "surface-variant": "#e1e3e4", "outline-variant": "#c0c9bb",
+        "inverse-on-surface": "#f0f1f2", "surface-container": "#edeeef",
+        "on-error": "#ffffff", "surface-container-low": "#f3f4f5",
+        "on-primary-fixed-variant": "#0c5216"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: {
+        base: "4px", lg: "40px", gutter: "24px", "margin-desktop": "48px",
+        xl: "64px", sm: "16px", "margin-mobile": "16px", xs: "8px", md: "24px"
+      },
+      fontFamily: {
+        "label-md": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"],
+        "headline-sm": ["Inter"], "display-lg-mobile": ["Inter"], "body-lg": ["Inter"],
+        "label-sm": ["Inter"], "display-lg": ["Inter"]
+      },
+      fontSize: {
+        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }]
+      }
+    }
+  }
+}
+</script>
+<style>
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+body { min-height: max(884px, 100dvh); }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased md:hidden pb-[100px] pt-16">
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm flex items-center justify-between px-margin-mobile h-16">
+<button class="p-2 -ml-2 text-primary hover:bg-surface-container-low rounded-full"><span class="material-symbols-outlined">menu</span></button>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">EthioInfluence</div>
+<button class="p-2 -mr-2 text-primary hover:bg-surface-container-low rounded-full"><span class="material-symbols-outlined">search</span></button>
+</header>
+<main class="w-full">
+<section class="px-margin-mobile pt-md pb-lg flex flex-col gap-md items-center text-center">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface">Connect with Ethiopia's Finest Influencers</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Discover authentic voices, elevate your brand, and manage campaigns effortlessly on our premier marketplace.</p>
+<div class="flex flex-col w-full gap-sm mt-sm">
+<button class="w-full bg-primary-container text-on-primary py-3 rounded-lg font-label-md text-label-md shadow-sm active:scale-95 transition-transform">I'm a Brand</button>
+<button class="w-full bg-surface text-on-surface border border-outline-variant py-3 rounded-lg font-label-md text-label-md active:bg-surface-container-low">I'm a Creator</button>
+</div>
+</section>
+<section class="py-md">
+<div class="px-margin-mobile flex justify-between items-end mb-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Featured Talent</h2>
+<a class="font-label-md text-label-md text-primary font-medium" href="browse.html">View All</a>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-sm px-margin-mobile pb-xs snap-x snap-mandatory">
+<div class="min-w-[240px] w-[240px] snap-center bg-surface-container-lowest rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] border border-outline-variant/30 flex flex-col overflow-hidden">
+<div class="h-40 w-full relative">
+<img class="w-full h-full object-cover rounded-t-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWwfy4_JYKCTi8J-IVajeCilfsIWlH2xOyUwS_b1jcGEpuOvf5gXq-52548bkrQLzA9An0a8HDRatDrWZwDnC6AxWCnyWrqIoRzhPzUT_GKSBT8awmwvimvdvYThKu_xXf5lij8L0iv_TWViFaRfRHrdu8olDtSGjKKG3xbSNJGfXJRMiMbF3y1D45MKMzYTviBfitQNyJhR50TUhLNasNCLvSxXxHpL4TFmnefCHPNWDKgWNu8-xIqH_sXDui_BCnkYzyw9UflHkw"/>
+<div class="absolute top-2 right-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#4CAF50]"></span><span class="font-label-sm text-label-sm text-on-surface">Online</span></div>
+</div>
+<div class="p-sm flex flex-col gap-xs">
+<div><h3 class="font-label-md text-label-md text-on-surface font-semibold">Semhal Tadesse</h3><p class="font-label-sm text-label-sm text-on-surface-variant">Lifestyle &amp; Fashion</p></div>
+<div class="flex flex-wrap gap-1 mt-1"><span class="bg-surface-container py-0.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant text-[10px]">120k Followers</span><span class="bg-surface-container py-0.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant text-[10px]">Addis Ababa</span></div>
+</div>
+</div>
+<div class="min-w-[240px] w-[240px] snap-center bg-surface-container-lowest rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] border border-outline-variant/30 flex flex-col overflow-hidden">
+<div class="h-40 w-full relative">
+<img class="w-full h-full object-cover rounded-t-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2XQKP_d2lGR_rPpCH3NaHdL3ztA-d6pe2moziOAhlOupRLG_e5VraYlzbZ-EysYenv-qs8xwqy7hOgsOlX2n3K7A1tXrtEjdLwYCUwbz1xx52uumBbZO48tS1J5-HBBacZVehDOutU7MygebYXFzsNAxJur3vrefY8d-8NZjR0hZmM2jHLHXGNsd_8X-d2QZ_gDQ6ZDFA-jPdfIJhxUdSc6aBq7LOql7hWG3rH_MOy6-p4JdXaJhXstqUqbVm97JCMzkKq1F58jhp"/>
+</div>
+<div class="p-sm flex flex-col gap-xs">
+<div><h3 class="font-label-md text-label-md text-on-surface font-semibold">Dawit Tech</h3><p class="font-label-sm text-label-sm text-on-surface-variant">Technology &amp; Gadgets</p></div>
+<div class="flex flex-wrap gap-1 mt-1"><span class="bg-surface-container py-0.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant text-[10px]">85k Followers</span><span class="bg-surface-container py-0.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant text-[10px]">Tech</span></div>
+</div>
+</div>
+<div class="min-w-[240px] w-[240px] snap-center bg-surface-container-lowest rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] border border-outline-variant/30 flex flex-col overflow-hidden">
+<div class="h-40 w-full relative">
+<img class="w-full h-full object-cover rounded-t-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlT1wJkn2KR-EEZBo08xAIgOOhRnOGqxTssg6Ubo5Nvl_Q9YuOV2ibVQb3zN2DA2UyRfq4q9NqcpklhvxdJSdpMs_z46TzGdB2hNYjqKRf6RMZ64gx-LPHxzBFqvPKlJ2TM6SynlZP7CXifcaWl92Tqa7RdORcPnO2zi-2ZK_4u659euDrRDp2wstcS-QpIVirsBZAtFXv0DGeQO3LDhKIS0TPwfzfag8C1tUtWUqoVCWMxP66SVqZRq_AevrF3_5BHBHDrOps-3ES"/>
+</div>
+<div class="p-sm flex flex-col gap-xs">
+<div><h3 class="font-label-md text-label-md text-on-surface font-semibold">Kalkidan Fit</h3><p class="font-label-sm text-label-sm text-on-surface-variant">Health &amp; Fitness</p></div>
+<div class="flex flex-wrap gap-1 mt-1"><span class="bg-surface-container py-0.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant text-[10px]">200k Followers</span><span class="bg-surface-container py-0.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant text-[10px]">Fitness</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-margin-mobile py-lg bg-surface-container-low mt-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface text-center mb-md">How It Works</h2>
+<div class="flex flex-col gap-md">
+<div class="flex items-start gap-sm bg-surface-container-lowest p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+<div class="bg-primary-container/10 text-primary-container p-3 rounded-full flex-shrink-0"><span class="material-symbols-outlined" style="font-variation-settings:'FILL'1">search</span></div>
+<div><h3 class="font-label-md text-label-md text-on-surface font-semibold mb-1">1. Find Talent</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">Browse our curated directory of top Ethiopian influencers across various niches.</p></div>
+</div>
+<div class="flex items-start gap-sm bg-surface-container-lowest p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+<div class="bg-primary-container/10 text-primary-container p-3 rounded-full flex-shrink-0"><span class="material-symbols-outlined" style="font-variation-settings:'FILL'1">handshake</span></div>
+<div><h3 class="font-label-md text-label-md text-on-surface font-semibold mb-1">2. Connect &amp; Negotiate</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">Send proposals directly and discuss campaign details in our secure messaging platform.</p></div>
+</div>
+<div class="flex items-start gap-sm bg-surface-container-lowest p-sm rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+<div class="bg-primary-container/10 text-primary-container p-3 rounded-full flex-shrink-0"><span class="material-symbols-outlined" style="font-variation-settings:'FILL'1">rocket_launch</span></div>
+<div><h3 class="font-label-md text-label-md text-on-surface font-semibold mb-1">3. Launch Campaign</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">Execute your marketing strategy and track performance metrics seamlessly.</p></div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface shadow-[0_-4px_12px_rgba(0,0,0,0.12)] flex justify-around items-center h-20 pb-safe px-2 border-t border-outline-variant">
+<a href="index.html" class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1"><span class="material-symbols-outlined mb-1" style="font-variation-settings:'FILL'1">explore</span><span class="font-label-sm text-label-sm">Explore</span></a>
+<a href="browse.html" class="flex flex-col items-center justify-center text-on-surface-variant w-16"><span class="material-symbols-outlined mb-1">calendar_today</span><span class="font-label-sm text-label-sm">Bookings</span></a>
+<a href="dashboard.html" class="flex flex-col items-center justify-center text-on-surface-variant w-16"><span class="material-symbols-outlined mb-1">chat_bubble</span><span class="font-label-sm text-label-sm">Messages</span></a>
+<a href="profile.html" class="flex flex-col items-center justify-center text-on-surface-variant w-16"><span class="material-symbols-outlined mb-1">person</span><span class="font-label-sm text-label-sm">Profile</span></a>
+</nav>
+</body>
+</html>
